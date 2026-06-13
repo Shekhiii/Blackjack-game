@@ -1,0 +1,149 @@
+body{
+  
+  background: linear-gradient(to bottom, #243550 0%, #171f33 25%, #0a0d15 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  
+
+  color: #e2e8f0; 
+  font-family: sans-serif;
+
+}
+
+
+header{
+    font-size: 3.5em;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#gameicon{
+    width: 50px;
+    position: relative;
+    transform: translateY(7px);
+}
+
+#box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 170px;
+}
+
+#box button{
+    width:200px ;
+    font-size: 1.6em;
+    margin: 8px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+#box button:hover{
+    background-color: rgb(134, 135, 137);
+}
+
+
+#quitbut:hover{
+    color:transparent;
+    position:relative;
+    
+}
+
+
+#quitbut:hover::after{
+    content:"NAIVE";
+    color:red;
+    position:absolute;
+    display: flex;
+    top:0;
+    left:60px;
+}
+
+
+#rulecard{
+    width: 350px;
+    height: 500px;
+    border:3px;
+    border-style: solid;
+    overflow: auto;
+    margin-left: 200px ;
+    margin-top: 160px;
+    padding: 7px;
+    display:none;
+}
+
+
+#gamecard{
+    
+    display: flex;
+    flex-direction: column;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 0px;
+    align-items:center ;
+
+
+
+}
+
+#dealer{
+    background-color: rgb(210, 40, 40);
+}
+
+#you{
+    background-color: rgb(17, 143, 17);
+    width: 200px;
+
+}
+
+
+
+#gamebut{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:30px
+}
+
+
+#gamebut button{
+    font-size: 1.6em;
+    border-radius: 7px;
+    background-color:rgb(197, 170, 119);
+}
+
+#gamebut button:hover{
+    background-color: rgb(115, 90, 59);
+}
+
+
+
+#gameresult{
+    background-color:rgb(230, 230, 49);
+    font-size: 3em;
+    display: flex;
+    width: max-content;
+    position: fixed;
+    top:50%;
+    right:100px;
+    color:black;
+    opacity: 100%;
+}
+
+
+
+.hidden{
+    display: none;
+}
+
+
+.dim{
+    opacity: 20%;
+    
+}
+
+

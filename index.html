@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+
+
+<div id="mainpage">
+
+
+    <header>
+        <span>BLACKJACK</span>
+        <img src="card-game.png"  id="gameicon"></icon>
+    </header>
+
+    <div id="box">
+    <button id="playbut">Play Game</button>
+    <button id="setbut">Settings</button>
+    <button id="quitbut" >Quit</button>    
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="gamepage" class="hidden">
+        
+    <div id="rulecard">
+
+        <h3>RULES</h3>
+        <p>
+            1. Card Values Before placing a bet, you need to know how to count your hand.<br>
+
+•Numbered Cards (2–10): Worth their exact face value.<br>
+
+•Face Cards (Jack, Queen, King): Worth 10 points each.<br>
+
+•Aces: Worth either 1 or 11 points, depending on what helps your hand more.<br>
+
+•Soft Hand: A hand containing an Ace counted as 11 (e.g., Ace + 6 = Soft 17).<br>
+
+•Hard Hand: A hand without an Ace, or where the Ace must count as 1 to keep you from busting.<br>
+<br>
+2. The Setup & Deal
+The game is typically played with 1 to 8 standard 52-card decks shuffled together.<br>
+
+•Place Bets: Every player places an initial wager in their betting circle.<br>
+
+•The Deal: The dealer gives two cards face-up to each player. The dealer receives one card face-up (the upcard) and one card face-down (the hole card).<br>
+
+•Natural Blackjack: If your first two cards are an Ace and any 10-value card, you have a Blackjack. If the dealer doesn't also have one, you win immediately—typically earning a higher payout of 3:2 (instead of the standard 1:1).<br>
+<br>
+
+3. Player Decisions
+Starting from the dealer's left, each player chooses how to play their hand. You can keep taking cards until you decide to stop or you bust (go over 21, resulting in an automatic loss).<br>
+
+•Hit: Take another card from the dealer to increase your total.<br>
+
+•Stand: Keep your current cards and end your turn.<br>
+
+•Double Down: Double your original bet in exchange for taking exactly one more card, after which you must stand.<br>
+
+•Split: If your first two cards are a pair (e.g., two 8s), you can double your bet and split them into two completely separate hands. The dealer will give each card a second companion card, and you play them out individually.<br>
+
+•Surrender: Available at some tables. You give up half your bet and forfeit the hand immediately after the initial deal if you think your chances are terrible.<br>
+<br>
+
+4. The Dealer's Rules
+Once all players have finished making their choices, the dealer flips over their hidden face-down card. Unlike players, the dealer has no personal choice and must follow fixed table rules:<br>
+
+•Must Hit if their card total is 16 or less.<br>
+
+•Must Stand if their card total is 17 or more.<br>
+
+•Note: Some casino tables require the dealer to hit on a "Soft 17" (an Ace and a 6). This will be clearly printed right on the felt layout of the table.<br>
+<br>
+
+5. Determining the Winner<br>
+•You Bust: You lose your bet immediately, even if the dealer later goes over 21.<br>
+
+•The Dealer Busts: All remaining players who haven't busted win even money (1:1).<br>
+
+•Nobody Busts: The hand closest to 21 wins.<br>
+
+•Push (Tie): If you and the dealer finish with the exact same numerical total, it's a tie. Your chips stay in the betting circle, and nobody wins or loses money.</p>
+
+
+
+    </div>
+
+
+    <div id="gamecard">
+
+        <p id="dealer">DEALER</p>
+        <p id="dealerno">rfh</p>
+        <p id="you">YOU</p>
+        <p id="userno">bhb</p>
+
+
+
+
+
+
+    </div>
+
+
+
+    <div id="gamebut">
+
+        <button id="hitbut" onclick="hitfun()">HIT</button>
+        <button id="standbut" onclick="standfun()">STAND</button>
+
+
+
+    </div>
+
+
+    <span id="gameresult"></span>
+
+</div>    
+
+
+
+
+
+
+
+<div id="settingpage" class="hidden">
+
+
+
+<!-- <audio src="funkaud.mp3" autoplay loop controls></audio> -->
+
+
+</div>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
