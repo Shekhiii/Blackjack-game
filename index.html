@@ -8,10 +8,6 @@
 </head>
 <body>
 
-
-
-
-
 <div id="mainpage">
 
 
@@ -25,21 +21,7 @@
     <button id="setbut">Settings</button>
     <button id="quitbut" >Quit</button>    
     </div>
-
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -112,9 +94,9 @@ Once all players have finished making their choices, the dealer flips over their
     <div id="gamecard">
 
         <p id="dealer">DEALER</p>
-        <p id="dealerno">rfh</p>
+        <p id="dealerno">CHOOSE YOUR</p>
         <p id="you">YOU</p>
-        <p id="userno">bhb</p>
+        <p id="userno">BETS</p>
 
 
 
@@ -127,12 +109,23 @@ Once all players have finished making their choices, the dealer flips over their
 
     <div id="gamebut">
 
-        <button id="hitbut" onclick="hitfun()">HIT</button>
-        <button id="standbut" onclick="standfun()">STAND</button>
-
-
-
+        <button id="hitbut"  class="hidden">HIT</button>
+        <button id="standbut"  class="hidden">STAND</button>
     </div>
+
+    <div id="betbox">
+
+        <p id="bal">BALANCE:</p>
+        <p id="bet">BET:</p>
+        <div id="betbut">
+        <button id="hun" class="betbut">100$</button>
+        <button id="twohun" class="betbut">200$</button>
+        <button id="fivehun" class=""betbut>500$</button>
+        <button id="deal">DEAL</button>
+        </div>   
+    </div>
+
+
 
 
     <span id="gameresult"></span>
@@ -158,5 +151,6 @@ Once all players have finished making their choices, the dealer flips over their
 
 
     <script src="index.js"></script>
+    <!-- <script src="bindex.js"></script> -->
 </body>
 </html>

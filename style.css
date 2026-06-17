@@ -147,3 +147,64 @@ header{
 }
 
 
+#betbox{
+    border-style: solid;
+    width: 300px;
+    position: fixed;
+    top:40%;
+    padding: 10px;
+    left: 15%;
+    font-size: 2em;
+    border-width: 5px;
+    border-color: white;
+    border-radius:5px;
+}
+
+
+#betbut{
+
+    justify-content: center;
+    display: flex;
+    gap:5px;
+    
+}
+
+#betbut button{
+    font-size: 0.7em;
+    border:none;
+    border-radius: 5px;
+}
+
+
+#hun{
+    background-color: rgba(227, 225, 225, 0.774);
+}
+
+#twohun{
+    background-color: rgb(188, 70, 70);
+}
+
+#fivehun{
+    background-color: aqua;
+}
+
+#deal{
+    background-color: black;
+    color: white;
+}
+
+#hun:hover{
+    background-color: rgb(109, 108, 108);
+}
+
+#twohun:hover{
+    background-color: rgba(143, 26, 26, 0.74);
+}
+
+#fivehun:hover{
+    background-color: rgba(10, 186, 186, 0.668);
+}
+
+#deal:hover{
+    background-color: rgba(118, 118, 118, 0.411);
+}
