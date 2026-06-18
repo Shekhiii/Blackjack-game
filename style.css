@@ -1,6 +1,6 @@
 body{
   
-  background: linear-gradient(to bottom, #243550 0%, #171f33 25%, #0a0d15 100%);
+  background: linear-gradient(to bottom, #0f3719 0%, #14410f 25%, #063a08 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
@@ -12,17 +12,24 @@ body{
 
 }
 
+@font-face {
+    font-family: caveat;
+    src: url(fonts/Caveat-VariableFont_wght.ttf);
+}
 
 header{
-    font-size: 3.5em;
+    font-family:caveat;
+    font-size: 6.5em;
+    font-weight:1000;
     text-align: center;
     margin-top: 30px;
+    -webkit-text-stroke:2px black;
 }
 
 #gameicon{
-    width: 50px;
+    width: 100px;
     position: relative;
-    transform: translateY(7px);
+    transform: translateY(15px);
 }
 
 #box{
@@ -30,20 +37,26 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 170px;
+    margin-top: 120px;
 }
 
 #box button{
-    width:200px ;
-    font-size: 1.6em;
+    width:250px ;
+    font-size: 2em;
     margin: 8px;
     cursor: pointer;
     border-radius: 10px;
+    background-color: hsl(0, 0%, 0%);
+    color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: aliceblue;
+    padding: 7px;
 }
 
 
 #box button:hover{
-    background-color: rgb(134, 135, 137);
+    background-color: hsl(0, 0%, 31%);
 }
 
 
@@ -155,9 +168,14 @@ header{
     padding: 10px;
     left: 15%;
     font-size: 2em;
-    border-width: 5px;
-    border-color: white;
+    border-width: 8px;
+    border-color: rgb(0, 0, 0);
     border-radius:5px;
+    color:black
+}
+
+#betbox p{
+    font-weight: 500;
 }
 
 
@@ -173,6 +191,7 @@ header{
     font-size: 0.7em;
     border:none;
     border-radius: 5px;
+    font-weight: 500;
 }
 
 

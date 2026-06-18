@@ -12,13 +12,13 @@ function shuffle(array) {
     return array;
 }
 
-const suits = ['♦️', '♣️', '♠️', '💗'];
+const suits = ['hearts', 'spades', 'diamonds', 'clubs'];
 const ranks = [
     { name: '2', value: 2 }, { name: '3', value: 3 }, { name: '4', value: 4 },
     { name: '5', value: 5 }, { name: '6', value: 6 }, { name: '7', value: 7 },
     { name: '8', value: 8 }, { name: '9', value: 9 }, { name: '10', value: 10 },
-    { name: 'J', value: 10 }, { name: 'Q', value: 10 }, { name: 'K', value: 10 },
-    { name: 'A', value: 11 }  
+    { name: 'jack', value: 10 }, { name: 'queen', value: 10 }, { name: 'king', value: 10 },
+    { name: 'ace', value: 11 }  
 ];
 
 let deck = [];            
@@ -27,12 +27,13 @@ for (let suit of suits) {
     for (let rank of ranks) {
         deck.push({
             name: rank.name + suit,
-            value: rank.value
+            value: rank.value,
+            image:`individual sprites/${rank.name}_of_${suit}.png`
         });
     }
 }
 
-
+console.log(deck[0].image)
 shuffle(deck);
 
 let baltext = document.getElementById("bal");
@@ -72,8 +73,10 @@ function assigncard() {
     userhand.push(deck.pop());
 
    
-    dealercard.textContent = "X  " + dealerhand[1].name;
-    usercard.textContent = userhand[0].name + " " + userhand[1].name;        
+    dealercard.innerHTML = `<img src="individual sprites/back.png" width="100">
+                            <img src="${dealerhand[1].image}" width="100">`;
+    usercard.innerHTML = `<img src="${userhand[0].image}" width="100">
+                            <img src="${userhand[1].image}" width="100">`;        
 }
 
 function addbet(value) {
@@ -130,7 +133,7 @@ hitbut.onclick = function() {
     let nextCard = deck.pop();
     userhand.push(nextCard);
     
-    usercard.textContent += " " + nextCard.name;
+    usercard.innerHTML += " "+`<img src="${userhand[userhand.length-1].image}" width="100">`;
     usertotal = caltotal(userhand);
     
     console.log("Current Total: " + usertotal);
