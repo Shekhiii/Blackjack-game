@@ -3,6 +3,43 @@ document.getElementById("playbut").addEventListener("click", () => {
     document.getElementById("gamepage").classList.remove('hidden');
 });
 
+const playbut=document.getElementById("playbut")
+const setbut=document.getElementById("setbut")
+const quitbut=document.getElementById("quitbut")
+
+const hoverSound = new Audio("858722__smillandwelson__g3-fire-mode-switch.mp3");
+const clickSound = new Audio("707041__vilkas_sound__vs-button-click-04.mp3");
+
+playbut.addEventListener("mouseenter", () => {
+    hoverSound.currentTime = 0;
+    hoverSound.play();}
+)    
+
+setbut.addEventListener("mouseenter", () => {
+    hoverSound.currentTime = 0;
+    hoverSound.play();}
+)    
+
+quitbut.addEventListener("mouseenter", () => {
+    hoverSound.currentTime = 0;
+    hoverSound.play();}
+)    
+
+playbut.addEventListener("click", () => {
+    clickSound.currentTime = 0;
+    clickSound.play();}
+)    
+
+setbut.addEventListener("click", () => {
+    clickSound.currentTime = 0;
+    clickSound.play();}
+)    
+
+quitbut.addEventListener("click", () => {
+    clickSound.currentTime = 0;
+    clickSound.play();}
+)    
+
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -50,6 +87,33 @@ const fivehunbut = document.getElementById("fivehun");
 const dealbut = document.getElementById("deal");
 const hitbut = document.getElementById("hitbut");
 const standbut = document.getElementById("standbut");
+const chipsSound = new Audio("201809__fartheststar__poker_chips5.wav");
+const dealSound= new Audio("dealbut.mp3");
+
+
+
+hunbut.addEventListener("click", () => {
+    chipsSound.currentTime = 0;
+    chipsSound.play();}
+)    
+
+twohunbut.addEventListener("click", () => {
+    chipsSound.currentTime = 0;
+    chipsSound.play();}
+)    
+
+fivehunbut.addEventListener("click", () => {
+    chipsSound.currentTime = 0;
+    chipsSound.play();}
+)    
+
+dealbut.addEventListener("click", () => {
+    dealSound.currentTime = 0;
+    dealSound.play();}
+)    
+
+
+
 
 
 let dealercard = document.getElementById("dealerno");
@@ -140,6 +204,7 @@ hitbut.onclick = function() {
     
     if (usertotal > 21) {
         gameresult.textContent="YOU BUST"
+        gameresult.classList.remove('hidden')
         hitbut.disabled=true
         standbut.disabled=true
         document.getElementById("gamecard").classList.add('dim')
@@ -147,6 +212,8 @@ hitbut.onclick = function() {
         baltext.textContent=`BALANCE: ${newbal}$`
         bet=0
         bettext.textContent=`BET: ${bet}$`
+        dealercard.innerHTML = `<img src="${dealerhand[0].image}" width="100">
+                            <img src="${dealerhand[1].image}" width="100">`;
     }
 }
 
@@ -157,14 +224,17 @@ standbut.onclick=function() {
     dealertotal=caltotal(dealerhand);
     if(usertotal>dealertotal){
         gameresult.textContent="YOU WIN"
+        gameresult.classList.remove('hidden')
         newbal+=2*bet
     }
     else if(usertotal<dealertotal){
         gameresult.textContent="YOU LOSE"
+        gameresult.classList.remove('hidden')
     }
     else{
         gameresult.textContent="PUSH"
-        balance+=bet
+        newbal+=bet
+        gameresult.classList.remove('hidden')
     }
     hitbut.disabled=true
     standbut.disabled=true
@@ -173,6 +243,8 @@ standbut.onclick=function() {
     baltext.textContent=`BALANCE: ${newbal}$`
     bet=0
     bettext.textContent=`BET: ${bet}$`
+    dealercard.innerHTML = `<img src="${dealerhand[0].image}" width="100">
+                            <img src="${dealerhand[1].image}" width="100">`;
 }
 
 
@@ -196,10 +268,11 @@ document.body.addEventListener("click",(event)=>
             hunbut.disabled=false
             twohunbut.disabled=false
             fivehunbut.disabled=false
-            dealercard.textContent="CHOOSE YOUR"
-            usercard.textContent="BETS"
+            dealercard.textContent="PLACE YOUR BETS"
+            usercard.textContent=""
             dealerhand=[]
             userhand=[]
+            gameresult.classList.add('hidden')
             
 
 
